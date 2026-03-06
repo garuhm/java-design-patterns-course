@@ -1,3 +1,5 @@
+package trivial;
+
 public class NotificationService {
     public void sendNotification(String type){
         if(type.equalsIgnoreCase("email")){
