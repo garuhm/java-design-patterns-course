@@ -5,6 +5,12 @@ public class Meal {
     private final Drink drink;
     private final Fries fries;
 
+    private Meal(Builder builder){
+        this.burger = builder.burger;
+        this.drink = builder.drink;
+        this.fries = builder.fries;
+    }
+
     public static class Builder{
         private final Burger burger;
         private Drink drink;
@@ -22,5 +28,30 @@ public class Meal {
             this.fries = fries;
             return this;
         }
+
+        public Meal build(){
+            return new Meal(this);
+        }
+    }
+
+    @Override
+    public String toString() {
+        return "Meal{" +
+                "burger=" + burger +
+                ", drink=" + drink +
+                ", fries=" + fries +
+                '}';
+    }
+
+    public Burger getBurger() {
+        return burger;
+    }
+
+    public Drink getDrink() {
+        return drink;
+    }
+
+    public Fries getFries() {
+        return fries;
     }
 }
