@@ -38,8 +38,8 @@ public class Meal {
     public String toString() {
         return "Meal{" +
                 "burger=" + burger +
-                ", drink=" + drink +
-                ", fries=" + fries +
+                ", drink=" + (drink != null ? drink + "": "None") +
+                ", fries=" + (fries != null ? fries + "": "None") +
                 '}';
     }
 
